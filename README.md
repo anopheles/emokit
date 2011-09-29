@@ -51,6 +51,7 @@ See epocd.c example
 Python library
 --------------
 
+```
   import emotiv
   headset = emotiv.Emotiv()
   try:
@@ -59,6 +60,7 @@ Python library
         print packet.gyroX, packet.gyroY
   finally:
     headset.close()
+```
 
 Platform Specifics
 ==================
