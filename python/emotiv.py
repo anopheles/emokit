@@ -85,10 +85,10 @@ class Emotiv(object):
             self.device.open()
         except IndexError:
             if len(devices) == 0:
-                logger.error("Emotiv device was not found using vendor_id %s" % vendor_id)
+                logger.error("Emotiv device was not found using vendor_id %s" % hex(vendor_id))
             else:
                 logger.error("Emotiv headsetId out of range using vendor_id: %s and headsetId: %s." % (
-                vendor_id, headsetId))
+                hex(vendor_id), headsetId))
             return False
 
         def handle(data):
